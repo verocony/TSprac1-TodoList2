@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { CiTrash } from "react-icons/ci";
+import { FaPencilAlt } from "react-icons/fa";
 
 
 
@@ -69,7 +70,7 @@ const Todo = (props: TodoProps) => {
                 <CiTrash />
               </button>
               <button className="btn-update" onClick={handleClickUpdateBtn}>
-                <CiTrash />
+                <FaPencilAlt />
               </button>
             </>
           )}
