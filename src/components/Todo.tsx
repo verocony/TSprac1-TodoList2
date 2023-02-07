@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { CiTrash } from "react-icons/ci";
 import { FaPencilAlt } from "react-icons/fa";
+import { FaUpload } from 'react-icons/fa';
+import '../styles/todo.css'
 
 
 
@@ -47,14 +49,16 @@ const Todo = (props: TodoProps) => {
   };
     return (
         <div className="todo-item">
-        <div>
+        <div className='title-container'>
+          Title
           {isEdit ? (
             <input value={title} onChange={handleChangeTitle}></input>
           ) : (
             <p className="todo-title">{title}</p>
           )}
         </div>
-        <div>
+        <div className='content-container'>
+          Content
           {isEdit ? (
             <input value={content} onChange={handleChangeContent}></input>
           ) : (
@@ -63,7 +67,7 @@ const Todo = (props: TodoProps) => {
         </div>
         <div className="btns-container">
           {isEdit ? (
-            <button onClick={handleClickSubmitBtn}>submit</button>
+            <button onClick={handleClickSubmitBtn}><FaUpload /></button>
           ) : (
             <>
               <button className="btn-delete" onClick={handleClickDeleteBtn}>

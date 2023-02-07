@@ -20,7 +20,9 @@
 }
 
 .btn-container button {
-    width: 30%;
+    width: 100px;
     height: 100%;
+    left: 50%;
+    transform: translate(200%);
     margin-left: 20px;
 }
